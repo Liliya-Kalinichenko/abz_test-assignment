@@ -1,0 +1,214 @@
+.App {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: linear-gradient(to right, #09203f 0%, #537895 100%);
+
+  &__main {
+    padding: 40px 0 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    flex-grow: 1;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 20px;
+    }
+  }
+}
+
+.container {
+  padding-inline: 10%;
+  @media (max-width: 768px) {
+    padding-inline: 5%;
+  }
+}
+
+.BlockList {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
+  &__item {
+    flex-grow: 1;
+  }
+}
+
+.Block {
+  background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+  height: 15em;
+  max-width: 100%;
+  min-width: 200px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  color: rgb(50, 69, 112);
+  font-size: 14px;
+  padding: 10px;  
+
+  &__button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-image: url('./assets/close.svg');
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    transition-duration: 0.3s;
+
+    &:hover {
+      cursor: pointer;
+      background-color: rgba(50, 69, 112, 0.2);
+      border-radius: 5px;
+    }
+  }
+}
+
+.Header {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #f68084;
+  color: rgba(164, 191, 254, 0.4);
+  font-size: 25px;
+  letter-spacing: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.Footer {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #f68084;
+  
+  color: rgba(164, 191, 254, 0.4);
+  font-size: 25px;
+  letter-spacing: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-size: 12px;
+  position: relative;
+
+  &__input {
+    padding: 6px;
+    width: 200px;
+    height: 24px;
+    border: 1px solid rgba(164, 191, 254, 0.4);
+    border-radius: 5px;
+    color: #a6c0fe;
+
+    &::placeholder {
+      color: rgba(164, 191, 254, 0.4);;
+    }
+
+    &:focus {
+      background-color: rgba(245, 125, 129, 0.1);
+    }
+  }
+
+  &__button {
+    width: 80px;
+    height: 32px;
+    border-radius: 5px;
+    color: #a6c0fe;
+    background-image: linear-gradient(15deg, #13547a 0%, #64a29b 100%);
+    font-weight: 600;
+    letter-spacing: 2px;
+    transition-duration: 0.3s;
+    border: 1px solid transparent;
+    color: rgb(36, 50, 81);
+
+    &:disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-image: none;
+      border: 1px solid #64a29b;
+      color: #a6c0fe;
+    }
+  }
+  
+  &__info {
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    font-size: 10px;
+    color: rgba(222, 68, 101, 0.764);
+  }
+}
+
+.is-error {
+  border-color: rgba(222, 68, 101, 0.764);;
+}
+
+.ErrorModal {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(49, 71, 88, 0.66);
+
+  &__content {
+    position: relative;
+    width: 50vw;
+    height: 40vh;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3ebec;    
+  }
+
+  &__info {
+    text-align: center;
+    font-size: 16px;
+    color: rgba(222, 68, 101, 0.764);
+    font-weight: 500;
+  }
+
+  &__button {
+    position: absolute;
+    background-image: url('./assets/close.svg');
+    width: 24px;
+    height: 24px;
+    top: 10px;
+    right: 10px;
+    background-size: contain;
+
+    &:hover {
+      cursor: pointer;
+      background-color: rgba(50, 69, 112, 0.2);
+      border-radius: 5px;
+    }
+  }
+}
