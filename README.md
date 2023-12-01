@@ -10,6 +10,7 @@ For Demo of this project you can visit [DEMO LINK](https://Liliya-Kalinichenko.g
 * React
 * HTML5
 * SCSS
+* * [Free API](https://api.restful-api.dev) for demonstration purpose
 
 ## Contact
 
