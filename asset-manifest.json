@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/abz_test-assignment/static/css/main.2c7d1667.css",
+    "main.js": "/abz_test-assignment/static/js/main.80483b07.js",
+    "static/media/close.svg": "/abz_test-assignment/static/media/close.445b45bfc7fa1b7f7f4b.svg",
+    "index.html": "/abz_test-assignment/index.html",
+    "main.2c7d1667.css.map": "/abz_test-assignment/static/css/main.2c7d1667.css.map",
+    "main.80483b07.js.map": "/abz_test-assignment/static/js/main.80483b07.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2c7d1667.css",
+    "static/js/main.80483b07.js"
+  ]
+}
